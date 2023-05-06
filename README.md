@@ -1,6 +1,9 @@
 # Android-custom-IME-via-Java-20230505
 A tenkey keyboard like the a part of '101' keyboard layout.
 A simple keyboard for entering numbers only.
+
+To make the description of basic functions easier to read, I did not add any unnecessary decorations.
+
 ## Development environment
 This app is developed only for Android app.
     Android Studio Bumblebee | 2021.1.1 Patch 1
