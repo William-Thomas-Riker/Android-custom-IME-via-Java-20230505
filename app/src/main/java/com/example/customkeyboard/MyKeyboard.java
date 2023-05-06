@@ -43,8 +43,6 @@ public class MyKeyboard extends InputMethodService implements KeyboardView.OnKey
   ////キーボードが表示されるたびに呼ばれるメソッド
   @Override
   public void onStartInputView(EditorInfo editorInfo, boolean restarting) {
-    //editorInfo.actionId = EditorInfo.IME_ACTION_DONE;
-    //Log.d("Now in",editorInfo.fieldName);
     ////何らかの処理
   }
   ////キーボードが閉じるときに呼ばれるメソッド
@@ -92,33 +90,6 @@ public class MyKeyboard extends InputMethodService implements KeyboardView.OnKey
         ic.deleteSurroundingText(1, 0);
         break;
       case KeyEvent.KEYCODE_ENTER:
-        //getCurrentInputEditorInfo().actionId=EditorInfo.IME_ACTION_DONE;
-        // キーコードとフラグを設定する
-/*
-        int keyCode = KeyEvent.KEYCODE_ENTER;
-        int keyAction = KeyEvent.ACTION_DOWN;
-        int keyFlags = KeyEvent.FLAG_EDITOR_ACTION;
-
-        // KeyEventオブジェクトを作成する
-        KeyEvent keyEvent = new KeyEvent(keyAction, keyCode);
-        // KeyEventオブジェクトにフラグを追加する
-        keyEvent = new KeyEvent(
-                keyEvent.getDownTime(),
-                keyEvent.getEventTime(),
-                keyAction,
-                keyCode,
-                0,
-                0,
-                KeyCharacterMap.VIRTUAL_KEYBOARD,
-                0,
-                keyFlags,
-                InputDevice.SOURCE_KEYBOARD);
-*/
-        //ic = getCurrentInputConnection();
-        // InputConnectionにKeyEventを送信する
-        //ic.sendKeyEvent(keyEvent);
-        //keyEvent.changeAction(keyEvent, KeyEvent.ACTION_UP);
-        //ic.sendKeyEvent(keyEvent);
         ic.performEditorAction(EditorInfo.IME_ACTION_DONE);//切り札:onEditorActionListener
         //Log.d("*** IME ENTER ***",""+getCurrentInputEditorInfo().actionId);
         break;
