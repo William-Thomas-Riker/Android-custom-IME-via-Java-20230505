@@ -86,7 +86,7 @@ public class MyKeyboard extends InputMethodService implements KeyboardView.OnKey
       case KeyEvent.KEYCODE_0:
         ic.commitText("0", 1);
         break;
-      case Keyboard.KEYCODE_DELETE:
+      case KeyEvent.KEYCODE_DEL:
         ic.deleteSurroundingText(1, 0);
         break;
       case KeyEvent.KEYCODE_ENTER:
