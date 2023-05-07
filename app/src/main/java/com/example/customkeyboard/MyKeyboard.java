@@ -86,11 +86,12 @@ public class MyKeyboard extends InputMethodService implements KeyboardView.OnKey
       case KeyEvent.KEYCODE_0:
         ic.commitText("0", 1);
         break;
-      case KeyEvent.KEYCODE_DEL:
+      case Keyboard.KEYCODE_DELETE:
         ic.deleteSurroundingText(1, 0);
         break;
       case KeyEvent.KEYCODE_ENTER:
-        ic.performEditorAction(EditorInfo.IME_ACTION_DONE);//切り札:onEditorActionListener
+        ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
+        ic.performEditorAction(EditorInfo.IME_ACTION_DONE);//dispatch 'DONE'
         //Log.d("*** IME ENTER ***",""+getCurrentInputEditorInfo().actionId);
         break;
       case KeyEvent.KEYCODE_MINUS:
