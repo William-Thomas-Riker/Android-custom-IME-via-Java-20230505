@@ -6,14 +6,14 @@
     android:keyWidth="25%p"
     android:horizontalGap="0px"
     android:verticalGap="0px"
-    android:keyHeight="60dp">
+    android:keyHeight="10%p">
 
     <Row>
 
         <Key android:codes="14" android:keyLabel="7" />
         <Key android:codes="15" android:keyLabel="8" />
         <Key android:codes="16" android:keyLabel="9" />
-        <Key android:codes="69" android:keyLabel="-" />
+        <Key android:codes="69" android:keyLabel="―" />
     </Row>
     <Row>
         <Key android:codes="11" android:keyLabel="4" />
@@ -26,7 +26,7 @@
         <Key android:codes="9" android:keyLabel="2" />
         <Key android:codes="10" android:keyLabel="3" />
         <Key android:codes="66" android:keyLabel="DONE"
-            android:keyHeight="120dp" />
+            android:keyHeight="20%p" />
     </Row>
     <Row>
         <Key android:codes="7" android:keyLabel="0"
